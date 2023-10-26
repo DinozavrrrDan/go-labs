@@ -2,7 +2,7 @@ package main
 
 func findKthLargest(arr []int, num int) int {
 	quickSortStart(arr)
-	return arr[len(arr)-1]
+	return arr[len(arr)-1-num]
 }
 
 func partition(arr []int, low, high int) ([]int, int) {
