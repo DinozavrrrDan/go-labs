@@ -1,0 +1,23 @@
+package calculator
+
+import "fmt"
+
+func Evaluate(firstNumber, secondNumber int, operation string) (int, error) {
+	var result int
+	var err error
+	switch operation {
+	case plus:
+		result = firstNumber + secondNumber
+	case minus:
+		result = firstNumber - secondNumber
+	case multiply:
+		result = firstNumber * secondNumber
+	case devide:
+		if secondNumber == 0 {
+			err = fmt.Errorf(devisionByZero)
+		} else {
+			result = firstNumber / secondNumber
+		}
+	}
+	return result, err
+}

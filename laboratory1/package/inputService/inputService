@@ -1,0 +1,24 @@
+package inputService
+
+import "fmt"
+
+func InputNumber() (int, error) {
+	var number int
+	if number, err := fmt.Scan(&number); err != nil {
+		return number, err
+	}
+	return number, nil
+}
+
+func InputOperation() (string, error) {
+	var operation string
+	fmt.Scan(&operation)
+	if isValidOperator(operation) {
+		return operation, nil
+	}
+	return operation, fmt.Errorf(incorrectOperation)
+}
+
+func IsValidOperator(operator string) bool {
+	return operator == plus || operator == minus || operator == multiply || operator == devide
+}
