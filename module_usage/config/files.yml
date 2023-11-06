@@ -1,0 +1,7 @@
+files:
+  - path: tests/testfiles/file1.txt
+    substring: Hello there
+  - path: tests/testfiles/file2.txt
+    substring: GENERAL KENOBI
+  - path: tests/testfiles/file3.txt
+    substring: R2-D2
