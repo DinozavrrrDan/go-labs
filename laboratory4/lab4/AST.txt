@@ -1,0 +1,65 @@
+
+before walk main
+.   DCL # main.go:4:5
+.   .   NAME-main.number esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:10  
+.   DCL # main.go:4:5
+.   .   NAME-main.yaNumber esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:18
+.   AS2 Def tc(1) # main.go:4:5
+.   AS2-Lhs
+.   .   NAME-main.number esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:10  
+.   .   NAME-main.yaNumber esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:18
+.   AS2-Rhs
+.   .   LITERAL-1 int tc(1) # main.go:4:6
+.   .   LITERAL-2 int tc(1) # main.go:4:9
+.   INLMARK # +main.go:4:5
+.   DCL tc(1) # main.go:4:5
+.   .   NAME-main.~R0 esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:32
+.   AS2 tc(1) # main.go:4:5
+.   AS2-Lhs
+.   .   NAME-main.~R0 esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:32
+.   AS2-Rhs
+.   .   MUL int tc(1) # main.go:4:5 main.go:8:16
+.   .   .   NAME-main.number esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:10
+.   .   .   NAME-main.yaNumber esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:18
+.   GOTO main..i0 tc(1) # main.go:4:5
+.   LABEL main..i0 # main.go:4:5
+after walk main
+.   DCL # main.go:4:5
+.   .   NAME-main.number esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:10
+.   DCL # main.go:4:5
+.   .   NAME-main.yaNumber esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:18
+.   BLOCK # main.go:4:5
+.   BLOCK-List
+.   .   AS tc(1) # main.go:4:5
+.   .   .   NAME-main.number esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:10
+.   .   .   LITERAL-1 int tc(1) # main.go:4:6
+.   .   AS tc(1) # main.go:4:5
+.   .   .   NAME-main.yaNumber esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:18
+.   .   .   LITERAL-2 int tc(1) # main.go:4:9
+.   INLMARK # +main.go:4:5
+.   DCL tc(1) # main.go:4:5
+.   .   NAME-main.~R0 esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:32
+.   BLOCK # main.go:4:5
+.   BLOCK-List
+.   .   AS tc(1) # main.go:4:5
+.   .   .   NAME-main.~R0 esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:32
+.   .   .   MUL int tc(1) # main.go:4:5 main.go:8:16
+.   .   .   .   NAME-main.number esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:10
+.   .   .   .   NAME-main.yaNumber esc(no) Class:PAUTO Offset:0 InlFormal OnStack Used int tc(1) # main.go:4:5 main.go:7:18
+.   GOTO main..i0 tc(1) # main.go:4:5
+.   LABEL main..i0 # main.go:4:5
+
+before walk mul
+.   RETURN tc(1) # main.go:8:2
+.   RETURN-Results
+.   .   MUL int tc(1) # main.go:8:16
+.   .   .   NAME-main.number esc(no) Class:PPARAM Offset:0 OnStack Used int tc(1) # main.go:7:10
+.   .   .   NAME-main.yaNumber esc(no) Class:PPARAM Offset:0 OnStack Used int tc(1) # main.go:7:18
+after walk mul
+.   RETURN tc(1) # main.go:8:2
+.   RETURN-Results
+.   .   AS tc(1) # main.go:8:2
+.   .   .   NAME-main.~r0 esc(no) Class:PPARAMOUT Offset:0 OnStack Used int tc(1) # main.go:7:32
+.   .   .   MUL int tc(1) # main.go:8:16
+.   .   .   .   NAME-main.number esc(no) Class:PPARAM Offset:0 OnStack Used int tc(1) # main.go:7:10
+.   .   .   .   NAME-main.yaNumber esc(no) Class:PPARAM Offset:0 OnStack Used int tc(1) # main.go:7:18
