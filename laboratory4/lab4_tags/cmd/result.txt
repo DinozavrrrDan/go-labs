@@ -1,0 +1,8 @@
+PS C:\Users\Данил\Desktop\go-homework\laboratory4\lab4_tags\cmd> go build -tags pro
+PS C:\Users\Данил\Desktop\go-homework\laboratory4\lab4_tags\cmd> .\cmd.exe
+Hi from pro
+Hi from not pro!
+
+PS C:\Users\Данил\Desktop\go-homework\laboratory4\lab4_tags\cmd> go build
+PS C:\Users\Данил\Desktop\go-homework\laboratory4\lab4_tags\cmd> .\cmd.exe
+Hi from not pro!
