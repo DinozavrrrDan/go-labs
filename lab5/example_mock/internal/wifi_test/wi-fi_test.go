@@ -11,6 +11,8 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+//go:generate mockery --all --testonly --quiet --outpkg wifi_test --output .
+
 type rowTestSysInfoGetAddresses struct {
 	addrs       []string
 	errExpected error
