@@ -51,7 +51,7 @@ var tesInputDataSelectUniqueValues = inputDataSelectUniqueValues{
 func TestGetNames(t *testing.T) {
 	mockDB, mock, err := sqlmock.New()
 	if err != nil {
-		t.Fatal()
+		t.Fatalf("an error '%s' was not expected when marshaling expected jsondata", err)
 	}
 	dbService := Service{DB: mockDB}
 	for i, row := range testTableGetNames {
@@ -83,7 +83,7 @@ func mockDbRowsName(names []string) *sqlmock.Rows {
 func TestSelectUniqueValues(t *testing.T) {
 	mockDB, mock, err := sqlmock.New()
 	if err != nil {
-		t.Fatal()
+		t.Fatalf("an error '%s' was not expected when marshaling expected jsondata", err)
 	}
 	dbService := Service{DB: mockDB}
 	for i, row := range testTableSelectUniqueValues {
