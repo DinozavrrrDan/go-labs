@@ -26,7 +26,7 @@ func main() {
 	turnstile := Turnstile{}
 
 	var wg sync.WaitGroup
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 100; i++ {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
@@ -38,7 +38,7 @@ func main() {
 	fmt.Println("С использованием примитива синхронизации:", turnstile.GetCount())
 
 	var wg2 sync.WaitGroup
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 100; i++ {
 		wg2.Add(1)
 		go func() {
 			defer wg2.Done()
